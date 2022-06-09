@@ -8,14 +8,32 @@ wordpress_sites:
       - canonical: example.com
         redirects:
           - www.example.com
-    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:example/example.com.git # replace with your Git repo URL
+    local_path: ../../../../../../home/build/src/bedrock-site-example # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:strarsis/bedrock-site-example.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
-    branch: master
+    branch: main
     multisite:
       enabled: false
     ssl:
       enabled: false
-      provider: letsencrypt
+      provider: self-signed
     cache:
       enabled: false
+
+  examples.com:
+    site_hosts:
+      - canonical: examples.com
+    local_path: ../../../../../../home/build/src/bedrock-multisite-example # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:strarsis/bedrock-multisite-example.git # replace with your Git repo URL
+    repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
+    branch: main
+    multisite:
+      enabled: true
+      subdomains: true
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
+    env:
+      domain_current_site: site2.examples.com
