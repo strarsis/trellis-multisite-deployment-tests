@@ -1,4 +1,4 @@
-### Fork for testing multisite deploys
+# Fork for testing multisite deploys
 
 <p align="center">
   <a href="https://roots.io/trellis/">
@@ -31,6 +31,9 @@
 <p align="center">
   <a href="https://roots.io/"><strong><code>Website</code></strong></a> &nbsp;&nbsp; <a href="https://docs.roots.io/trellis/master/installation/"><strong><code>Documentation</code></strong></a> &nbsp;&nbsp; <a href="https://github.com/roots/trellis/releases"><strong><code>Releases</code></strong></a> &nbsp;&nbsp; <a href="https://discourse.roots.io/"><strong><code>Support</code></strong></a>
 </p>
+
+# Multisite deployment tests (fork)
+This Trellis setup is used for testing multisite deployments (and preceding provisioning), mixed with single site deployments.
 
 ## Sponsors
 
